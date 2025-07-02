@@ -1,9 +1,12 @@
-import { SlUser } from "react-icons/sl";
+import Image from "../assets/image.png"
 const TeamCard = ({ name, description, role, campus, callToAction }) => {
   return (
     <div className="bg-white rounded-xl p-6 w-[240px] text-center hover:shadow-lg transition duration-300 flex-shrink-0 cursor-pointer">
       <div className="flex justify-center mb-4">
-        <SlUser className="text-yellow-500 text-6xl" />
+        <img
+          src={Image}
+          className="w-[91px] h-[98px]   border-yellow-500 p-1 object-contain"
+        />
       </div>
 
       <h3 className="text-xl font-semibold text-yellow-600 mb-2">{name}</h3>

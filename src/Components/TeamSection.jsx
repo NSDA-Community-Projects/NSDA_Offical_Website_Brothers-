@@ -7,9 +7,7 @@ const TeamSection = () => {
       {/* Yellow Header */}
       <div className="bg-yellow-500 py-6 text-center max-w-[1600px] mx-auto mt-10 px-4">
         <h2 className="text-3xl font-bold text-[#003865]">Meet Our Teams</h2>
-        <p
-          className="color-[#010B40] font-nunito text-center text-lg md:text-xl font-normal leading-none px-4 py-2 rounded-md max-w-[736px] mx-auto"
-        >
+        <p className="color-[#010B40] font-nunito text-center text-lg md:text-xl font-normal leading-none px-4 py-2 rounded-md max-w-[736px] mx-auto">
           Get to know our core teams, their roles and how to become a member
         </p>
       </div>

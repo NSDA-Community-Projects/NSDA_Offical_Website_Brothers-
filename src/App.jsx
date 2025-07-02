@@ -1,13 +1,12 @@
-import './App.css'
-import TeamSection from './Components/TeamSection'
+import "./App.css";
+import TeamSection from "./Components/TeamSection";
 
 function App() {
-
   return (
     <>
-   <TeamSection />
+      <TeamSection />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
