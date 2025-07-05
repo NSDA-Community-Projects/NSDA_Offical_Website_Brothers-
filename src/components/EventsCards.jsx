@@ -4,7 +4,7 @@ const EventsCards = ({events, currentIndex}) => {
 
     return (
         <>
-            <div className="relative overflow-X-hidden w-full">
+            <div className="relative overflow-X-hidden md:overflow-hidden w-full">
                 <div className="flex gap-4 transition-transform duration-300 h-full text-sm"
                     style={{
                         transform: `translateX(-${currentIndex * (100 / 5)}%)`,
