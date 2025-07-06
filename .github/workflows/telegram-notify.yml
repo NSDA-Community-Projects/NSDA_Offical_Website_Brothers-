@@ -1,0 +1,22 @@
+name: Notify Telegram on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  telegramNotify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram Message to Group
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RENDER_URL: ${{ secrets.RENDER_URL }}
+        run: |
+          MESSAGE="🚀 *NSDA Website Updated!*\n\n🔗 [Live Site]($RENDER_URL)\n\n📝 Commit: _${{ github.event.head_commit.message }}_\n👥 Team: A new update has been deployed. Please verify and test it.\n\n✅ Triggered by: [${{ github.actor }}](https://github.com/${{ github.actor }})"
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage \
+            -d chat_id=$TELEGRAM_CHAT_ID \
+            -d text="$MESSAGE" \
+            -d parse_mode=Markdown
