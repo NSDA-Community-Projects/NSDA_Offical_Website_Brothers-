@@ -6,7 +6,7 @@ export default function HeroSection() {
       
       <Navbar />
       <div className="max-w-4xl py-8 mx-auto flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#003049] leading-tight">
+        <h1 className="text-[70px] md:text-5xl amiri-bold text-[#003049] leading-tight">
           Empowering Muslim Students <br />
           in Tech-Innovate with Faith
         </h1>
@@ -32,7 +32,7 @@ export default function HeroSection() {
           <FaTelegramPlane />
         </button>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 text-sm text-[#003049] font-medium">
+        <div className="grid grid-cols-2 sm:grid-cols-4 p-6 px-20 gap-4 mt-12 text-sm text-[#003049] w-full font-medium bg-[rgb(255,254,254)] ">
           <div className="flex flex-col items-center">
             <img src="speaker.png" alt="Top Speakers" className="w-8 h-8 mb-1" />
             Top Speakers
