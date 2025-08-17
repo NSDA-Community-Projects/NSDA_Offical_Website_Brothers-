@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 const TeamSection = () => {
   return (
     <section>
-      <div className="bg-[#DFAD3B] text-center w-[1600px] mx-auto  px-4">
+      <div className="bg-[#DFAD3B] text-center w-[1600px]  mx-auto  px-4">
         <h2 className=" font-bold text-[#023665] font-tajawal text-[48px] leading-[100%] tracking-[0em]">
           Meet Our Teams
         </h2>
