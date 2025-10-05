@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const EventButtons = ({currentIndex, total, onNext, onPrev}) => {
+const SectionNavigation = ({currentIndex, total, onNext, onPrev}) => {
 
     return (
         <>
@@ -13,4 +13,4 @@ const EventButtons = ({currentIndex, total, onNext, onPrev}) => {
     )
 }
 
-export default EventButtons;
+export default SectionNavigation;
