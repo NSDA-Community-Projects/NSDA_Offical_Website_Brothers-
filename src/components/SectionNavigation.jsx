@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 
-const SectionNavigation = ({currentIndex, total, onNext, onPrev}) => {
+const SectionNavigation = ({ currentIndex, total, onPrev, onNext }) => {
 
     return (
-        <>
-            <div className="flex items-center gap-6 pl-12 pr-6">
-                <button onClick={onPrev} className="cursor-pointer">&lt;</button>
-                <span>{currentIndex + 1} / {total}</span>
-                <button onClick={onNext} className="cursor-pointer">&gt;</button>
-            </div>
-        </>
+        <div className="flex items-center gap-4">
+            {/* Left button */}
+            <button
+            onClick={onPrev}
+            className="px-3 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                &lt;
+            </button>
+
+            {/* Slide counter */}
+            <span className="font-semibold">
+                {currentIndex}/{total}
+            </span>
+            
+            {/* Right button */}
+            <button
+            onClick={onNext}
+            className="px-3 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                &gt;
+            </button>
+        </div>
     )
 }
 
