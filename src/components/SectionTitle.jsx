@@ -2,15 +2,13 @@ import React from "react";
 
 const SectionTitle = () => {
     return (
-        <div>
-            <h1 className="text-5xl font-bold pl-[82px] text-[#023665]">
-                Recent<br />
-                Events
-
-                <div className="w-[89px] h-[8px] bg-[#023665]"></div>
+        <div className="text-[#023665]">
+            <h1 className="text-[64px] font-bold ml-[82px] w-[207px] h-[154px] leading-tight">
+                Recent Events
+                <div className="w-[89px] h-[8px] bg-[#023665] -mt-2 mx-1"></div>
             </h1>
             
-            <p className="mt-6 md:mt-12 max-w-82">
+            <p className="w-[347px] h-[54px] mt-[31px] ml-[82px] text-[20px] font-medium">
                 Amaizing moments await. Secure your spot and stay in the loop!
             </p>
         </div>
