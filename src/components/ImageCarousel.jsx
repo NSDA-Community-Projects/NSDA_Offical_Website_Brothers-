@@ -5,31 +5,33 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const ImageCarousel = ({ events }) => {
+const ImageCarousel = ({ slides, onSlideChange, navigationRef }) => {
     return (
         <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={20}
-            slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
-            breakpoints={{
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-            }}
+        modules={[Navigation]}
+        spaceBetween={20}
+        slidesPerView={3}
+        onSlideChange={(swiper) => {
+            onSlideChange(swiper.activeIndex + 1);
+        }}
+        onInit={(swiper) => {
+            navigationRef.current = swiper;
+        }}
+        className="w-full"
         >
-            {events.map((event, i) => (
-                <SwiperSlide key={i}>
-                    <img
-                        src={event.image}
-                        alt="Event"
-                        className="h-[70%] w-full object-cover"
-                    />
-                    <button className="py-4">Watch Now</button>
-                    <p className="font-semibold">{event.description}</p>
+            {
+                slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                    <div className="overflow-hidden rounded-2xl shadow-md">
+                    <img src={slide.img} alt={slide.name} className="w-full h-48 object-cover" />
+                    <div className="p-3 bg-white">
+                        <h3 className="font-semibold">{slide.name}</h3>
+                        <p className="text-sm text-gray-500">{slide.desc}</p>
+                    </div>
+                    </div>
                 </SwiperSlide>
-            ))}
+                ))
+            }
         </Swiper>
     );
 };
