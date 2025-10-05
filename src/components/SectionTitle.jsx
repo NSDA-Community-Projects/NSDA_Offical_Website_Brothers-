@@ -1,6 +1,6 @@
 import React from "react";
 
-const EventTitle = () => {
+const SectionTitle = () => {
     return (
         <>
             <div>
@@ -16,4 +16,4 @@ const EventTitle = () => {
     )
 }
 
-export default EventTitle;
+export default SectionTitle;
