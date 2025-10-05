@@ -40,7 +40,7 @@ const RecentEvents = () => {
     };
 
     return (
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-50 p-8 h-screen">
             {/* Left Side */}
             <div className="flex flex-col justify-between space-y-8 md:col-span-1">
                 <SectionTitle />
