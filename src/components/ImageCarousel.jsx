@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const ImageCarousel = ({ slides, onSlideChange, navigationRef }) => {
+const ImageCarousel = ({ eventImages, onSlideChange, navigationRef }) => {
     return (
         <Swiper
         modules={[Navigation]}
@@ -17,17 +17,17 @@ const ImageCarousel = ({ slides, onSlideChange, navigationRef }) => {
         onInit={(swiper) => {
             navigationRef.current = swiper;
         }}
-        className="w-full"
+        className="w-full h-[502px]"
         >
             {
-                slides.map((slide) => (
-                <SwiperSlide key={slide.id}>
-                    <div className="overflow-hidden rounded-2xl shadow-md">
-                    <img src={slide.img} alt={slide.name} className="w-full h-48 object-cover" />
-                    <div className="p-3 bg-white">
-                        <h3 className="font-semibold">{slide.name}</h3>
-                        <p className="text-sm text-gray-500">{slide.desc}</p>
-                    </div>
+                eventImages.map((image, i) => (
+                <SwiperSlide key={i}>
+                    <div className="h-full">
+                        <img src={image.image} alt="Carousel Image" className="w-[360px] h-[420px] object-cover" />
+                        <div className="p-3 bg-white">
+                            <h3 className="font-semibold">Watch Now</h3>
+                            <p className="text-sm text-gray-500">{image.description}</p>
+                        </div>
                     </div>
                 </SwiperSlide>
                 ))
