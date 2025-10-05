@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const EventsCards = ({ events }) => {
+const ImageCarousel = ({ events }) => {
     return (
         <Swiper
             modules={[Navigation, Pagination]}
@@ -34,4 +34,4 @@ const EventsCards = ({ events }) => {
     );
 };
 
-export default EventsCards;
+export default ImageCarousel;
